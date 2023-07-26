@@ -1,28 +1,33 @@
-import React , { useState } from 'react';
+import React , { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form'
-import axios from 'axios';
+import { loginUser } from '../actions/userActions';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'react-bootstrap'
 import Login_img from '../Login_img';
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const loginstate = useSelector(state => state.loginUserReducer)
 
-    function login() {
-      const user = { email, password };
-    
-      axios.post('http://localhost:8000/api/signin', user)
-        .then(response => {
-          const token = response.data.token;
-          sessionStorage.setItem('currentUser', token);
-          console.log("right credentials")
-        })
-        .catch(error => {
-          console.error(error);
-        });
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+
+    useEffect(() => {
+  
+      if (sessionStorage.getItem('currentUser'))
+      {
+        navigate("/")
+      }
+    }, [])
+    function login () {
+      const user= {email, password}
+      dispatch(loginUser(user, navigate))
     }
     
     
