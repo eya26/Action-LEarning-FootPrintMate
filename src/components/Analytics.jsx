@@ -10,7 +10,7 @@ export default function Analytics() {
     <Section>
       <div className="analytic ">
         <div className="content">
-          <h5>Spent this month</h5>
+          <h5>write anything 1</h5>
           <h2>$682.5</h2>
         </div>
         <div className="logo">
@@ -22,7 +22,7 @@ export default function Analytics() {
           <IoStatsChart />
         </div>
         <div className="content">
-          <h5>Earnings</h5>
+          <h5>write anything 2</h5>
           <h2>$350.40</h2>
         </div>
       </div>
@@ -31,13 +31,13 @@ export default function Analytics() {
           <BiGroup />
         </div>
         <div className="content">
-          <h5>New clients</h5>
+          <h5>write anything 3</h5>
           <h2>321</h2>
         </div>
       </div>
       <div className="analytic ">
         <div className="content">
-          <h5>Activity</h5>
+          <h5>write anything 4</h5>
           <h2>$540.50</h2>
         </div>
         <div className="logo">
@@ -60,14 +60,14 @@ const Section = styled.section`
     gap: 1rem;
     transition: 0.5s ease-in-out;
     &:hover {
-      background-color: #ffc107;
+      background-color: #03A64A;
       color: black;
       svg {
         color: white;
       }
     }
     .logo {
-      background-color: black;
+      background-color: white;
       border-radius: 3rem;
       display: flex;
       justify-content: center;

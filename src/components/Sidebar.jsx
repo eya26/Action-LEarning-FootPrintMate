@@ -10,6 +10,7 @@ import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import scrollreveal from "scrollreveal";
+import image from "../assets/logo.png";
 export default function Sidebar() {
   const [currentLink, setCurrentLink] = useState(1);
   const [navbarState, setNavbarState] = useState(false);
@@ -47,8 +48,8 @@ export default function Sidebar() {
       <Section>
         <div className="top">
           <div className="brand">
-            <FaTaxi />
-            <span>MY TAXI</span>
+            <img src="/logo.png"/>
+            <span></span>
           </div>
           <div className="toggle">
             {navbarState ? (
@@ -79,7 +80,7 @@ export default function Sidebar() {
               >
                 <a href="#">
                   <RiDashboard2Fill />
-                  <span> Riders</span>
+                  <span> Carbon Calculator</span>
                 </a>
               </li>
               <li
@@ -88,7 +89,7 @@ export default function Sidebar() {
               >
                 <a href="#">
                   <FaAddressCard />
-                  <span> Payment Details</span>
+                  <span> Tasks</span>
                 </a>
               </li>
               <li
@@ -97,7 +98,7 @@ export default function Sidebar() {
               >
                 <a href="#">
                   <GiTwirlCenter />
-                  <span> Learning Center</span>
+                  <span> Learn</span>
                 </a>
               </li>
               <li
@@ -146,7 +147,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <RiDashboard2Fill />
-                <span> Riders</span>
+                <span> Carbon Calculator</span>
               </a>
             </li>
             <li
@@ -155,7 +156,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <FaAddressCard />
-                <span> Payment Details</span>
+                <span> Tasks</span>
               </a>
             </li>
             <li
@@ -164,7 +165,7 @@ export default function Sidebar() {
             >
               <a href="#">
                 <GiTwirlCenter />
-                <span> Learning Center</span>
+                <span> Learn</span>
               </a>
             </li>
             <li
@@ -194,7 +195,7 @@ export default function Sidebar() {
 const Section = styled.section`
   position: fixed;
   left: 0;
-  background-color: #212121;
+  background-color: #DEF7E5;
   height: 100vh;
   width: 18vw;
   display: flex;
@@ -219,12 +220,12 @@ const Section = styled.section`
       align-items: center;
       gap: 2rem;
       svg {
-        color: #ffc107;
+        color: #03A64A;
         font-size: 2rem;
       }
       span {
         font-size: 2rem;
-        color: #ffc107;
+        color: #03A64A;
         font-family: "Permanent Marker", cursive;
       }
     }
@@ -240,7 +241,7 @@ const Section = styled.section`
           padding: 0.6rem 1rem;
           border-radius: 0.6rem;
           &:hover {
-            background-color: #ffc107;
+            background-color: #03A64A;
             a {
               color: black;
             }
@@ -249,11 +250,11 @@ const Section = styled.section`
             text-decoration: none;
             display: flex;
             gap: 1rem;
-            color: white;
+            color: black;
           }
         }
         .active {
-          background-color: #ffc107;
+          background-color: #;
           a {
             color: black;
           }
@@ -266,14 +267,14 @@ const Section = styled.section`
     padding: 0.3rem 1rem;
     border-radius: 0.6rem;
     &:hover {
-      background-color: #da0037;
+      background-color: #03A64A;
     }
     a {
       text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      color: white;
+      color: black;
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
@@ -330,7 +331,7 @@ const ResponsiveNav = styled.div`
         padding: 0.6rem 1rem;
         border-radius: 0.6rem;
         &:hover {
-          background-color: #ffc107;
+          background-color: #03A64A;
           a {
             color: black;
           }
@@ -343,7 +344,7 @@ const ResponsiveNav = styled.div`
         }
       }
       .active {
-        background-color: #ffc107;
+        background-color: #03A64A;
         a {
           color: black;
         }

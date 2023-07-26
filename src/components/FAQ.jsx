@@ -9,21 +9,21 @@ export default function FAQ() {
   const faqs = [
     {
       icon: <AiFillCalendar />,
-      text: "How to manage time and get good marks for trips",
+      text: "write anything here",
     },
     {
       icon: <MdTimelapse />,
-      text: "How to regulate transactions over time",
+      text: "write anything here",
     },
     {
       icon: <IoMdCash />,
-      text: "Withdrawing money through an ATM",
+      text: "write anything here",
     },
   ];
   return (
     <Section>
       <div className="title">
-        <h2>Information for drivers</h2>
+        <h2>Informations</h2>
       </div>
       <div className="faqs">
         {faqs.map((faq) => {
@@ -45,7 +45,7 @@ const Section = styled.section`
   ${cardStyles};
   .title {
     h2 {
-      color: #ffc107;
+      color: #03A64A;
       font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
     }

@@ -2,33 +2,33 @@ import React from "react";
 import styled from "styled-components";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import avatarImage from "../assets/avatarImage.jpeg";
-import { cardStyles } from "./ReusableStyles";
 
+import { cardStyles } from "./ReusableStyles";
 export default function Transfers() {
   const transactions = [
     {
-      image: avatarImage,
-      name: "From Kishan Sheth",
+      image: <img src="/eya.jpg" />,
+      name: "Eya Chafter",
       time: "Today, 16:36",
-      amount: "+$50",
+      amount: "+1",
     },
     {
-      image: avatarImage,
-      name: "To Lauras Santos",
+      image: <img src="/chimou.jpg" />,
+      name: "Chaima Rajah",
       time: "Today, 08:49",
-      amount: "-$25",
+      amount: "+1",
     },
     {
-      image: avatarImage,
-      name: "From Jadon S.",
+      image: <img src="/arav.jpg" />,
+      name: "Aravinthan Sathasivam",
       time: "Yesterday, 14:36",
-      amount: "+$150",
+      amount: "+1",
     },
   ];
   return (
     <Section>
       <div className="title">
-        <h2>Your Transfers</h2>
+        <h2>New Connections</h2>
       </div>
       <div className="transactions">
         {transactions.map((transaction) => {
@@ -64,7 +64,7 @@ const Section = styled.section`
   gap: 1rem;
   .title {
     h2 {
-      color: #ffc107;
+      color: #03A64A;
       font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
     }
@@ -91,20 +91,20 @@ const Section = styled.section`
         }
       }
       &__amount {
-        background-color: #d7e41e1d;
+        background-color: black;
         padding: 0.2rem 0.5rem;
         width: 4rem;
         border-radius: 1rem;
         text-align: center;
         transition: 0.3s ease-in-out;
         &:hover {
-          background-color: #ffc107;
+          background-color: #03A64A;
           span {
             color: black;
           }
         }
         span {
-          color: #ffc107;
+          color: white;
         }
       }
     }
@@ -115,7 +115,7 @@ const Section = styled.section`
     justify-content: flex-end;
     align-items: center;
     text-decoration: none;
-    color: #ffc107;
+    color: black;
     font-weight: bold;
     margin-top: 1rem;
     gap: 0.5rem;

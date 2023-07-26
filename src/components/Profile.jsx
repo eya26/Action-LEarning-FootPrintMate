@@ -10,9 +10,9 @@ export default function Profile() {
         <img src={image} alt="" />
       </div>
       <div className="title">
-        <h2>Kishan Sheth</h2>
+        <h2>Mehdi Dhaou</h2>
         <h5>
-          <HiOutlineLocationMarker /> New York, USA
+          <HiOutlineLocationMarker /> Paris, France
         </h5>
       </div>
       <div className="info">
@@ -59,7 +59,7 @@ const Section = styled.section`
     text-align: center;
     h2,
     h5 {
-      color: #ffc107;
+      color: #03A64A;
       font-family: "Permanent Marker", cursive;
       letter-spacing: 0.3rem;
     }

@@ -162,8 +162,8 @@ export default function Earnings() {
     <Section>
       <div className="top">
         <div className="info">
-          <h5>This month earnings</h5>
-          <h1>$682.5</h1>
+          <h5>Your carbon footprint average</h5>
+          <h1>682.5</h1>
           <div className="growth">
             <span>+2.45%</span>
           </div>
@@ -184,7 +184,7 @@ export default function Earnings() {
               type="monotone"
               dataKey="data"
               stroke="#ffc107"
-              fill="#8068233e"
+              fill="#03A64A"
               strokeWidth={4}
             />
           </AreaChart>
@@ -210,18 +210,18 @@ const Section = styled.section`
         font-size: 2rem;
       }
       .growth {
-        background-color: #d7e41e1d;
+        background-color: black;
         padding: 0.5rem;
         border-radius: 1rem;
         transition: 0.3s ease-in-out;
         &:hover {
-          background-color: #ffc107;
+          background-color: #03A64A;
           span {
             color: black;
           }
         }
         span {
-          color: #ffc107;
+          color: white;
         }
       }
     }
@@ -229,7 +229,7 @@ const Section = styled.section`
   .chart {
     height: 70%;
     .recharts-default-tooltip {
-      background-color: black !important;
+      background-color: white !important;
       border-color: black !important;
     }
   }
