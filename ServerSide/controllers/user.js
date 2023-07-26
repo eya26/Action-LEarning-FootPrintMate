@@ -35,11 +35,13 @@ const signup = async (req, res) => {
   };
   
 
-  const signin = async (req, res) => {
-    const { user_email, password } = req.body;
-  
+const signin = async (req, res) => {
+   
     try {
-      const user = await User.findOne({ email: user_email });
+      console.log(req.body)
+    let { email, password } = req.body;
+
+      const user = await User.findOne({ email: email });
       if (!user) {
         return res.status(400).json({
           error: "Email was not found"
@@ -60,7 +62,7 @@ const signup = async (req, res) => {
       res.cookie('token', token, { expire: new Date() + 1 });
   
       // Send response
-      const { _id, name, email } = user;
+      const { _id, name } = user;
       return res.json({
         user: {
           _id,
@@ -69,7 +71,7 @@ const signup = async (req, res) => {
         }
       });
     } catch (err) {
-      console.log(err);
+      console.log('this is error',err);
       res.status(500).send("Something went wrong");
     }
   };
