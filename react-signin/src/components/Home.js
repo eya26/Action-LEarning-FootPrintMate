@@ -1,114 +1,54 @@
-
-import React, { useState } from 'react'
-import Form from 'react-bootstrap/Form'
-import { Button } from 'react-bootstrap'
-import Sign_img from '../Sign_img'
-import { NavLink } from "react-router-dom";
-
+import React from 'react';
 
 const Home = () => {
-
-
-    const [inpval,setInpval] = useState({
-        name:"",
-        email:"",
-        date:"",
-        password:""
-    })
-
-    const[data, setData] = useState([]);
-    console.log(inpval);
-
-    const getdata = (e)=>{
-        //console.log(e.target.value);
-
-    
-        const {value,name} = e.target;
-        //console.log(value,name);
-
-        setInpval(()=>{
-            return {
-                ...inpval,
-                [name]:value
-            }
-        })
-
-    }
-    const addData = (e) => {
-        e.preventDefault();
-      
-        const { name, email, date, password } = inpval;
-      
-        if (name === "") {
-          alert("name field is required");
-        } else if (email === "") {
-          alert("email field is required");
-        } else if (!email.includes("@")) {
-          alert("Please enter a valid email address");
-        } else if (date === "") {
-          alert("Date field is required");
-        } else if (password === "") {
-          alert("Password field is required");
-        } else if (password.length < 5) {
-          alert("Password length should be greater than 5");
-        } else {
-          console.log("Form submitted successfully!");
-         
-
-          localStorage.setItem("useryoutube", JSON.stringify([...data,inpval]));
-
-        }
-      };
-      
-
-
-
   return (
-    <> 
-        <div className= "container mt-3" >
-            <section className='d-flex justify-content-center align-items-center gap-3'>
-                <div  style={{ width: "447px"}}>
-                <h3 className='text-center col-lg-6' style={{ fontSize: "35px", marginBottom: "20px" }}>
-        Sign Up
-      </h3>
-                    <Form>
-                        
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                        
-                        <Form.Control type="text" name='name' onChange={getdata} placeholder="Enter your name" />
-                        
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                        
-                        <Form.Control type="email" name='email' onChange={getdata}  placeholder="Enter email" />
-                        
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                        
-                        <Form.Control   onChange={getdata}  name='date' type="date"  />
-                        
-                        </Form.Group>
+    <div style={{ backgroundColor: '#FFF5F5F5', minHeight: '100vh', padding: '20px', position: 'relative' }}>
+      <header className="text-center mt-5">
+        <h1 style={{ color: '#17594A', fontSize: '48px', marginBottom: '20px' }}>FootprintMate</h1>
+        <p className="lead" style={{ color: '#17594A', fontSize: '24px' }}>
+          <span style={{ color: 'black', fontStyle: 'italic' }}> 
+"Together for a Greener Planet – Start Today with FootprintMate."  </span>
+        </p>
+      </header>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            
-                            <Form.Control type="password"  name='password'  onChange={getdata}  placeholder="Password" />
-                        </Form.Group>
-                        <div style={{ display: 'grid', placeItems: 'center' }}>
-                        <Button variant="primary" className='mb-3 col-lg-6' onClick={addData} style={{ background: "rgb(67, 185, 127)" }} type="submit">
-                            Submit
-                        </Button>
-                        </div>
+      <img
+        src="/logo.png" // Replace this path with the path to your logo.png image
+        alt="Carbon Calculator"
+        className="img-fluid"
+        style={{ maxWidth: '300px', position: 'absolute', top: '20px', left: '20px' }}
+      />
 
-                        
-                    </Form>
-                    <p className='mt-3'>Already Have an Account ?  <span> <NavLink to="/login">Login</NavLink></span>  </p>
-                    </div >
-                <Sign_img />        
-            </section>
-
+      <div className="container mt-5">
+        <div className="row d-flex align-items-center">
+          <div className="col-md-6" style={{ margin: '0 auto', textAlign: 'left' }}>
+            <h2 style={{ color: '#17594A', textAlign: 'left', fontWeight: 'bold' }}> WHO ARE WE ?  </h2>
+            <p style={{ color: 'black', textAlign: 'left', fontWeight: 'bold' }}>
+             
+Welcome to FootprintMate! Estimate your carbon footprint with our quick quiz and get personalized insights. Track your progress and take actionable steps to reduce your carbon footprint. Stay motivated with our gamified approach, embark on challenges, earn awards, and join our eco-conscious community.
+            </p>
+          
+            <p style={{ color: 'black', textAlign: 'left', fontWeight: 'bold' }}>
+              Start your journey towards a greener future today with FootprintMate!
+            </p>
+            <a
+              href="/calculator"
+              className="btn btn-success btn-lg"
+              style={{ color: '#fff', backgroundColor: '#17594A', borderColor: '#17594A', textAlign: 'left' }}
+            >
+              Get Started
+            </a>
+          </div>
+          <div className="col-md-6">
+            <img
+              src="/home.png" // Replace this path with the path to your /home.png image
+              alt="Additional Image"
+              className="img-fluid"
+            />
+          </div>
         </div>
-    </>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
