@@ -42,7 +42,7 @@ const Login = () => {
     <div className= "container mt-3" >
             <section className='d-flex justify-content-center align-items-center gap-3'>
                 <div  style={{ width: "447px"}}>
-                <h3 className='text-center col-lg-6' style={{ fontSize: "35px", marginBottom: "20px" }}>
+                <h3 className='text-center col-lg-6' style={{ fontSize: "35px", marginBottom: "20px" , color: "#17594A" }}>
         Sign In
       </h3>
                     <Form>
