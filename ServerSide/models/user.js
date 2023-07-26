@@ -25,6 +25,10 @@ const userSchema = new mongoose.Schema({
         default:false,
         required: true
     },
+    date_of_birth: {
+        type: Date,
+        required: true
+    },
     encry_password: {
         type: String,
         required:true
