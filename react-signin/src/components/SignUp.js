@@ -15,7 +15,12 @@ const SignUp = () => {
     const [date_of_birth, setDob] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
 
-    const url = "http://localhost:3001/api/signup"
+    //to run this locally uncomment this
+    //const url = "http://localhost:3001/api/signup" 
+
+    //to run this on server
+    const url = "http://13.210.201.93:3001/api/signup" 
+
     debugger
     const submit = async() => {
         await axios.post(url, {
