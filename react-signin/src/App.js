@@ -7,6 +7,8 @@ import {Routes,Route} from "react-router-dom";
 import Login from './components/Login';
 import CarbonCalc from './components/CarbonCalc'; // Import the new CarbonCalc component
 import TogglePage from './components/TogglePage'; // Import the new CarbonCalc component
+import Game from "./components/Game";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path='signup' element={<SignUp/>} />
         <Route path='login' element={<Login/>} />
         <Route path='calculator' element={<TogglePage />} />
+        <Route path='quiz' element={<Game />} />
+        <Route path='dashboard' element={<Dashboard />} />
      </Routes>
      </>
    

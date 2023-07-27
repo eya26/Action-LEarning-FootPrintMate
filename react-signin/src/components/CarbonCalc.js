@@ -147,7 +147,7 @@ const CarbonCalc = () => {
           </Select>
       </div>
       <button className='btn-big' onClick={handleCalculate}>Calculate</button>
-      <Dashboard carbonFootprint={calculateCarbonFootprint()} ecoScore={ecoScore} />
+      {/* <Dashboard carbonFootprint={calculateCarbonFootprint()} ecoScore={ecoScore} /> */}
       <BatchPop open={open} onClose={handleClose} earnedBadges={earnedBadges} />
       {carbonSuccess && <p className="carbonSuccess">{carbonSuccess}</p>}
       {carbonError && <p className="carbonError">{carbonError}</p>}

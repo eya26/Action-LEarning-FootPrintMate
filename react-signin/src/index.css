@@ -83,3 +83,10 @@ button:hover{
     padding: 20px;
     background: #FFD8DA;
 }
+
+
+.Game-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
