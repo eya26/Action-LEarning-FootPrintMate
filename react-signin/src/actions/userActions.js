@@ -9,7 +9,7 @@ export const loginUser = ({email, password}) => async dispatch => {
     //const url = "http://localhost:3001/api/signin" 
 
     //to run this on server
-    const url = "http://13.210.201.93:3001/api/signin" 
+    const url = "http://13.210.201.93/api/signin" 
   const user = { email, password };
   try {
     const response = await axios.post(url, user);

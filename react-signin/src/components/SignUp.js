@@ -19,7 +19,7 @@ const SignUp = () => {
     //const url = "http://localhost:3001/api/signup" 
 
     //to run this on server
-    const url = "http://13.210.201.93:3001/api/signup" 
+    const url = "http://13.210.201.93/api/signup" 
 
     debugger
     const submit = () => {
