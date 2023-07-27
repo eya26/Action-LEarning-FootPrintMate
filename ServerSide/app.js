@@ -35,6 +35,6 @@ app.use('/api', QuizItemsRoutes)
 //const port = process.env.PORT || 8000
 
 // Starting a server
-app.listen(8000, () => {
+app.listen(3000, () => {
     console.log("started listening for resquests on port 8000");
 })
