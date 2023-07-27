@@ -11,3 +11,75 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* calculator styles start */
+
+.custom-input{
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border: 1px solid #B1B1B1;
+  background: #FAF8F8;
+  width: 450px;
+  /* height: 40px; */
+  border-radius: 0px !important;
+}
+
+.custom-dropdown{
+  width: 56%;
+  background: #FAF8F8;
+}
+
+button{
+  background-color: #03A64A;
+  color: #ffffff;
+  border: unset;
+}
+
+button:hover{
+  color: #ffffff;
+  background-color: #215759 !important;
+}
+
+.btn-big{
+  border-radius: 4px;
+  width: 450px;
+  height: 56px;
+}
+
+
+.toggle-custom button{
+  text-transform: lowercase !important;
+}
+
+
+.toggle-custom button:hover{
+  color: unset !important;
+  background: transparent !important;
+}
+
+.toggle-custom button:active{
+  background-color: transparent !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color: #03A64A !important; 
+}
+
+.css-1aquho2-MuiTabs-indicator{
+  background-color: #03A64A !important;
+}
+
+.carbonSuccess{
+  color: #090909;
+  text-align: center;
+  padding: 20px;
+  background: #D9FFE5;
+
+}
+
+.carbonError{
+    color: #090909;
+    text-align: center;
+    padding: 20px;
+    background: #FFD8DA;
+}
