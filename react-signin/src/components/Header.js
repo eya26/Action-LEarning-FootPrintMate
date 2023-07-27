@@ -23,6 +23,9 @@ const Header = () => {
             <>
               <Nav.Link href="home" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white' }}>Home</Nav.Link>
               <Nav.Link href="login" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white' }}>Login</Nav.Link>
+              <Nav.Link href="Quiz">Quiz</Nav.Link>
+            <Nav.Link href="calculator">Calculator</Nav.Link>
+            <Nav.Link href="dashboard">Dashboard</Nav.Link>
             </>
           )}
         </Nav>
