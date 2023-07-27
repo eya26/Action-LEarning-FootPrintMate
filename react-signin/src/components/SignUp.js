@@ -16,13 +16,16 @@ const SignUp = () => {
     const [isSubmit, setIsSubmit] = useState(false);
 
     const url = "http://localhost:3001/api/signup"
-    const submit = () => {
-        axios.post(url, {
+    debugger
+    const submit = async() => {
+        await axios.post(url, {
             name,
             email,
             date_of_birth,
             password
-        }).then(console.log("done"))
+        }).then((e)=>{
+            console.log("done",e)
+        })
             .catch((e) => console.log(e))
         setIsSubmit(true)
     }
