@@ -71,7 +71,7 @@ const Login = () => {
               </div>
             </Form>
             <p className="mt-3">
-              Create an account <span> <NavLink to="/">Sign Up</NavLink></span> {' '}
+              Create an account <span> <NavLink to="/Signup">Sign Up</NavLink></span> {' '}
             </p>
           </div>
           <Login_img />
