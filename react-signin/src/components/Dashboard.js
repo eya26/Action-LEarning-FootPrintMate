@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Dashboard2 from './DrawerSide';
+import Card from '@mui/material/Card';
 
 const Dashboard = () => {
   // State to hold the data from localStorage
@@ -28,14 +29,19 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
+      
       <h2>Dashboard</h2>
-      <div>
-        <h3>Carbon Footprint</h3>
+      <div className='col-6'>
+      <Card variant="outlined"><h3>Carbon Footprint</h3>
         <p>{initialCarbonFootprint.toFixed(2)} kgCO2e</p>
+        </Card>
+        
       </div>
-      <div>
-        <h3>Eco Score</h3>
+      <div className='col-6'>
+      <Card variant="outlined"><h3>Eco Score</h3>
         <p>{initialEcoScore}</p>
+        </Card>
+        
       </div>
     </div>
   );

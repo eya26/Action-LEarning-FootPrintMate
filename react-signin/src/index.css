@@ -90,3 +90,7 @@ button:hover{
   justify-content: center;
   align-items: center;
 }
+
+.drawer-custom{
+  width: 100%;
+}

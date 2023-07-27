@@ -25,69 +25,59 @@ const DrawerSide = () => {
   };
 
   return (
-    <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" style={{ backgroundColor: '#17594A' }}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={handleDrawerOpen}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-              FootprintMate
-            </Typography>
-            {user ? (
-              <Typography variant="h6" noWrap component="div" sx={{ mr: 2 }}>
-                Hello, {user.name}
-              </Typography>
-            ) : (
-              <></>
-            )}
-          </Toolbar>
-        </AppBar>
-      </Box>
+    <Drawer
+      variant="permanent" // Change 'persistent' to 'permanent'
+      anchor="left"
+      open={open}
+      onClose={handleDrawerClose}
+      sx={{
+        width: 240, // Set the desired width for the drawer
+        flexShrink: 0,
+        [`& .MuiDrawer-paper`]: { width: 240, boxSizing: 'border-box' },
+      }}
+    >
+      <AppBar position="static" sx={{ backgroundColor: '#17594A' }}>
+        <Toolbar>
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+            Your Logo
+          </Typography>
+        </Toolbar>
+      </AppBar>
 
-      <Drawer open={open} onClose={handleDrawerClose}>
-        <List>
-          {user ? (
-            <>
-              <ListItem component={Link} to="/home" onClick={handleDrawerClose}>
-                <ListItemText primary="Home" />
-              </ListItem>
-              <ListItem component={Link} to="/quiz" onClick={handleDrawerClose}>
-                <ListItemText primary="Quiz" />
-              </ListItem>
-              <ListItem component={Link} to="/calculator" onClick={handleDrawerClose}>
-                <ListItemText primary="Calculator" />
-              </ListItem>
-            </>
-          ) : (
-            <>
-              <ListItem component={Link} to="/home" onClick={handleDrawerClose}>
-                <ListItemText primary="Home" />
-              </ListItem>
-              <ListItem component={Link} to="/login" onClick={handleDrawerClose}>
-                <ListItemText primary="Login" />
-              </ListItem>
-              <ListItem component={Link} to="/quiz" onClick={handleDrawerClose}>
-                <ListItemText primary="Quiz" />
-              </ListItem>
-              <ListItem component={Link} to="/calculator" onClick={handleDrawerClose}>
-                <ListItemText primary="Calculator" />
-              </ListItem>
-              <ListItem component={Link} to="/dashboard" onClick={handleDrawerClose}>
-                <ListItemText primary="Dashboard" />
-              </ListItem>
-            </>
-          )}
-        </List>
-      </Drawer>
-    </>
+      <List>
+        {user ? (
+          <>
+            <ListItem component={Link} to="/home" onClick={handleDrawerClose}>
+              <ListItemText primary="Home" />
+            </ListItem>
+            <ListItem component={Link} to="/quiz" onClick={handleDrawerClose}>
+              <ListItemText primary="Quiz" />
+            </ListItem>
+            <ListItem component={Link} to="/calculator" onClick={handleDrawerClose}>
+              <ListItemText primary="Calculator" />
+            </ListItem>
+          </>
+        ) : (
+          <>
+            <ListItem component={Link} to="/home" onClick={handleDrawerClose}>
+              <ListItemText primary="Home" />
+            </ListItem>
+            <ListItem component={Link} to="/login" onClick={handleDrawerClose}>
+              <ListItemText primary="Login" />
+            </ListItem>
+            <ListItem component={Link} to="/quiz" onClick={handleDrawerClose}>
+              <ListItemText primary="Quiz" />
+            </ListItem>
+            <ListItem component={Link} to="/calculator" onClick={handleDrawerClose}>
+              <ListItemText primary="Calculator" />
+            </ListItem>
+            <ListItem component={Link} to="/dashboard" onClick={handleDrawerClose}>
+              <ListItemText primary="Dashboard" />
+            </ListItem>
+          </>
+        )}
+      </List>
+    </Drawer>
   );
 };
 
