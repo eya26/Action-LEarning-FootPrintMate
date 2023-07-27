@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser")
 const cors = require("cors")
 require("dotenv").config();
 
-
+const helmet = require("helmet")
 //DB connection 
 mongoose.connect(process.env.DATABASE, {
     
@@ -23,6 +23,7 @@ mongoose.connect(process.env.DATABASE, {
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(cors())
+app.use(helmet())
 
 //Import routes
 const userRoutes= require("./routes/user")

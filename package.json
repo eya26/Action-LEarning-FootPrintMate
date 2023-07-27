@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "helmet": "^7.0.0",
     "react-redux": "^8.1.1"
-  },
-  "devDependencies": {}
+  }
 }
