@@ -6,7 +6,7 @@ export const loginUser = ({email, password}) => async dispatch => {
 
   dispatch({ type: 'USER_LOGIN_REQUEST' });
 
-  const url = "http://localhost:8000/api/signin";
+  const url = "http://localhost:3001/api/signin";
   const user = { email, password };
   try {
     const response = await axios.post(url, user);

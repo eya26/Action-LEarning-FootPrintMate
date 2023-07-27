@@ -32,9 +32,9 @@ app.use('/api', userRoutes)
 const QuizItemsRoutes = require("./routes/QuizItems")
 app.use('/api', QuizItemsRoutes)
 
-//const port = process.env.PORT || 8000
+//const port = process.env.PORT || 300&
 
 // Starting a server
-app.listen(3000, () => {
-    console.log("started listening for resquests on port 8000");
+app.listen(3001, () => {
+    console.log("started listening for resquests on port 3000");
 })

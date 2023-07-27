@@ -15,7 +15,7 @@ const SignUp = () => {
     const [date_of_birth, setDob] = useState("");
     const [isSubmit, setIsSubmit] = useState(false);
 
-    const url = "http://localhost:8000/api/signup"
+    const url = "http://localhost:3001/api/signup"
     const submit = () => {
         axios.post(url, {
             name,
